@@ -11,6 +11,7 @@ fetch("http://localhost:8080/veterinarian")
       copy.querySelector(".surname").innerText = vet.surname;
       copy.querySelector(".id-card-code").innerText = vet.idCardCode;
       copy.querySelector(".edit").href = `./editvet.html?id=${vet.id}`;
+      copy.querySelector(".assign-task").href = `./addtasktovet.html?id=${vet.id}`;
       copy.querySelector(".remove").addEventListener("click", () => {
         if (confirm("Delete entry?")) {
           fetch(`http://localhost:8080/veterinarian/${vet.id}`, {
