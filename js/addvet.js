@@ -1,7 +1,11 @@
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
+
 const name = document.getElementById("name");
 const surname = document.getElementById("surname");
 const idCardCode = document.getElementById("id-card-code");
 
+document.getElementById("breadcrumb-name").innerText = "Add a Veterinarian";
 name.value = "Default";
 surname.value = "Default";
 idCardCode.value = "AAA111";
